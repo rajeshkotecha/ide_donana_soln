@@ -45,7 +45,7 @@ The solution is implemented using two types of data structures - **hash map** an
 The Python **blist** package also provides **sortedlist** type. It (**sortedlist**) provides the same implementation as **blist** but keeps the items on sorted order. Since calculating Percentage Rank requires values in ascending order the **sortedlist** type is the best choice. 
 
 ## Donors and Receivers Hash Maps
-The donors list is stored in a Python dictionary **donors\_dict**.
+A campaign donor is uniquely identified using his name and zip code. The donors list is stored in a hash map implemented as a Python dictionary named **donors\_dict**. Its key is a tuple containing donor's name and zip code. Its value is the earliest year in which the donor contributed to any political campaign. Since we are storing the earliest year in which the donor contributed to any political campaign it helps in determining whether a contributor is a repeat donor. 
 
 # Algorithm
 
