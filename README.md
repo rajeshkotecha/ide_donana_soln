@@ -29,6 +29,12 @@ $ python setup.py install
 
 $ python setup.py test
 
+$ cd ..
+
+$ rm -f blist-1.3.6.tar.gz 
+
+$ rm -rf blist-1.3.6/
+
 $ exit
 
 
