@@ -47,8 +47,9 @@ The Python **blist** package also provides **sortedlist** type. It (**sortedlist
 ## Donors and Receivers Hash Maps
 A campaign donor is uniquely identified using his name and zip code. The donors list is stored in a hash map implemented as a Python dictionary named **donors\_dict**. Its key is a tuple containing donor's name and zip code. Its value is the earliest year in which the donor contributed to any political campaign. Since we are storing the earliest year in which the donor contributed to any political campaign it helps in determining whether a contributor is a repeat donor. 
 
+```
 **donors\_dict** = {(name, zip\_code):year}
-
+```
 
 
 # Algorithm
