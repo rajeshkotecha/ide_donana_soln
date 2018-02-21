@@ -40,17 +40,24 @@ $ exit
 
 
 # Data Structures
-The solution is implemented using two types of data structures - **hash map** and **B-tree**. Hash map is implemented using Python dictionary type and B-tree using blist type. Python package **blist** uses Order Statistic B-tree to implement lists with fast insertion at arbitrary location. It also has very efficient retrieval capability. 
+## Summary
+The solution is implemented using two types of data structures - **hash map** and **B-tree**. Hash map is implemented using Python dictionary type and B-tree using Python blist type. Python package **blist** uses Order Statistic B-tree to implement lists with fast insertion at arbitrary location. It also has very efficient retrieval capability. 
 
 The Python **blist** package also provides **sortedlist** type. It (**sortedlist**) provides the same implementation as **blist** but keeps the items on sorted order. Since calculating Percentage Rank requires values in ascending order the **sortedlist** type is the best choice. 
 
-## Donors and Receivers Hash Maps
-A campaign donor is uniquely identified using his name and zip code. The donors list is stored in a hash map implemented as a Python dictionary named **donors\_dict**. Its key is a tuple containing donor's name and zip code. Its value is the earliest year in which the donor contributed to any political campaign. Since we are storing the earliest year in which the donor contributed to any political campaign it helps in determining whether a contributor is a repeat donor. 
+## Details
+### Donor Hash Map
+A campaign donor is uniquely identified using his name and zip code. The donors list is stored in a hash map implemented as a Python dictionary named **donors\_dict**. Its key is a tuple containing donor's name and zip code. Its value is the earliest year in which the donor contributed to any political campaign. Since we are storing the earliest year in which the donor contributed to any political campaign it helps in determining whether he is a repeat donor. 
 
 ```
-**donors\_dict** = {(name, zip\_code):year}
+donors_dict = {(donor name, zip code):earliest donation year}
 ```
 
+### Receiver Hash Map
+
+```
+politicians_dict = {(receiver id, zip code, donation year):(donation count, total donation amount, (donation amount1, donation amount2, donation amount3, ...)}
+```
 
 # Algorithm
 
