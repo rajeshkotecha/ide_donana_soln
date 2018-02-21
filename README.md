@@ -13,8 +13,11 @@ The solution is developed using Python on Linux operating system and requires bl
 Instructions to download and install blist package on nix OS -
 
 $ su - root
+
 $ wget https://pypi.python.org/packages/6b/a8/dca5224abe81ccf8db81f8a2ca3d63e7a5fa7a86adc198d4e268c67ce884/blist-1.3.6.tar.gz
+
 $ tar xvzf blist-1.3.6.tar.gz
+
 $ cd blist-1.3.6
 
 \# Install the blist package in 'site-packages' directory of Python installation -
