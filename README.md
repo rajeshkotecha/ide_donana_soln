@@ -18,10 +18,13 @@ $ tar xvzf blist-1.3.6.tar.gz
 $ cd blist-1.3.6
 
 \# Install the blist package in 'site-packages' directory of Python installation -
+
 $ python setup.py install
 
 \# Verify the correct installation and functioning of the package
+
 \# The tests require Python 2.5, 2.6, 2.7, 3, 3.1 or 3.2. 
+
 $ python setup.py test
 
 $ exit
