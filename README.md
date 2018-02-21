@@ -8,7 +8,7 @@
 This repository contains the solution for political candidates to help analyze loyalty trends in campaign contributions. It identifies repeat donors in various geographies and calculates the donation figures and frequency of donations. 
 
 # Setup Instructions
-The solution is developed using Python 2.6 on Linux operating system and requires blist package. Below are the details - 
+The solution is developed using Python 2.6 on Linux operating system and requires *blist* package. Below are the details - 
 
 Instructions to download and install blist package on \*nix OS -
 
