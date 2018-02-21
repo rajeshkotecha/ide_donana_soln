@@ -8,7 +8,7 @@
 This repository contains the solution for political candidates to help analyze loyalty trends in campaign contributions. It identifies repeat donors in various geographies and calculates the donation figures and frequency of donations. 
 
 # Setup Instructions
-The solution is developed using Python 2.6 on Linux operating system and requires *blist* package. Below are the details - 
+The solution is developed using Python 2.6 on Linux operating system and requires **blist** package. Below are the details - 
 
 Instructions to download and install blist package on \*nix OS -
 
@@ -20,17 +20,18 @@ $ tar xvzf blist-1.3.6.tar.gz
 
 $ cd blist-1.3.6
 
-\# Install the blist package in 'site-packages' directory of Python installation -
+\# *Install the blist package in 'site-packages' directory of Python installation -*
 
 $ python setup.py install
 
-\# Verify the correct installation and functioning of the package
-\# The tests require Python 2.5, 2.6, 2.7, 3, 3.1 or 3.2. 
+\# *Verify the correct installation and functioning of the package*
+\# *The tests require Python 2.5, 2.6, 2.7, 3, 3.1 or 3.2.*
 
 $ python setup.py test
 
 $ cd ..
 
+\# *Cleanup the installation file and directory -*
 $ rm -f blist-1.3.6.tar.gz 
 
 $ rm -rf blist-1.3.6/
@@ -39,7 +40,12 @@ $ exit
 
 
 # Data Structures
+The solution is implemented using two types of data structures - **hash map** and **B-tree**. Hash map is implemented using Python dictionary type and B-tree using blist type. Python package **blist** uses Order Statistic B-tree to implement lists with fast insertion at arbitrary location. It also has very efficient retrieval capability. 
 
+The Python **blist** package also provides **sortedlist** type. It (**sortedlist**) provides the same implementation as **blist** but keeps the items on sorted order. Since calculating Percentage Rank requires values in ascending order the **sortedlist** type is the best choice. 
+
+## Donors and Receivers Hash Maps
+The donors list is stored in a Python dictionary **donors\_dict**.
 
 # Algorithm
 
