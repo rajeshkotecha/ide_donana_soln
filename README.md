@@ -56,7 +56,8 @@ donors_dict = {(donor name, zip code):earliest donation year}
 ### Receiver Hash Map
 
 ```
-politicians_dict = {(receiver id, zip code, donation year):(donation count, total donation amount, (donation amount1, donation amount2, donation amount3, ...)}
+politicians_dict = {(receiver id, zip code, donation year):(donation count, total donation amount, 
+                                                           [donation amount1, donation amount2, donation amount3, ...]}
 ```
 
 # Algorithm
