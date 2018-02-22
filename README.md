@@ -90,21 +90,27 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
      - Skip the record. 
      - Go to step \#1. 
   3) Check if the contributor (name + zip) exists in the donors list \-  
-     - If the contributor exists \- 
+     - If the contributor (name + zip) exists \- 
        - Check if the donation is in chronological order \-
-         - If yes \- 
-           - He is a repeat donor.
-         - If not \-
+         - If in chronological order \- 
+           - Mark the current contributor as a repeat donor.
+         - If not in chronological order \-
            - The record is in reverse chronological order.
-           - Update the earliest year for the contributor in the donors list.
+           - Update the earliest year for the contributor to the current record's year in the donors list.
            - Go to step \#1. 
-     - If the contributor does not exist,
+     - If the contributor (name + zip) does not exist,
        - Add the contributor (name + zip) and year to the donors list.
        - Go to step \#1.
-  4) If the contributor is a repeat donor
-
+  4) If the contributor (name + zip) is a repeat donor \-
+     - Check if the recipient exists in the politicians list \-
+       - If exists \- 
+         - Add 1 to the running donation count for this recipient, zip code and donation year. 
+         - Add current contribution amount to the running donation total for this recipient, zip code and donation year. 
+         - Add current contribution amount to the list of donation amounts for this recipient, zip code and donation year.
+       - If does not exist \-
+         - Add the recipient to the politicians list. Initialize the running donation count (to 1), running donation total (to the current donation amount)  and list of donation amounts (to a list containing the current donation amount).  
   5) Calculate the percentile rank using the standard formula. 
-  6) Write the record with recipient details, percentile rank, running donation count, and running donation total to the output file. 
-  7) If end of input file reached, stop.
+  6) Write the record with recipient details (ID, zip code and donation year), percentile rank of this contribution to the recipient, running donation count for this recipient, and running donation total for this recipient to the output file. 
+  7) If end of input file reached, stop the processing.
   8) Go to step #1.
  
