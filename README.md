@@ -97,9 +97,11 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
            - Mark the current contributor as a _**repeat donor**_.
          - If not in chronological order \-
            - The record is in reverse chronological order.
+           - The current contributor is not considered as a _**repeat donor**_.
            - Update the earliest year for the contributor to the current record's year in the donors list.
            - Go to step \#1 to read the next individual contribution record. 
      - If the contributor (name + zip) does not exist,
+       - The current contributor is not a _**repeat donor**_.
        - Add the contributor (name + zip) and year to the donors list.
        - Go to step \#1 to read the next individual contribution record. 
   4) If the contributor (name + zip) is a _**repeat donor**_ \-
