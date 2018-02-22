@@ -5,7 +5,7 @@
 1. [Algorithm](README.md#Algorithm)
 
 # Introduction
-This repository contains the solution for political candidates to help analyze loyalty trends in campaign contributions. It identifies repeat donors in various geographies and calculates the donation figures and frequency of donations. 
+This repository contains the solution for political candidates to help analyze loyalty trends in campaign contributions. It identifies repeat donors in various geographies and calculates the donation figures & frequency of donations. 
 
 # Setup Instructions
 The solution is developed using **Python 2.6.6** on **Linux** operating system and requires **blist** package. Below are the details - 
@@ -73,7 +73,7 @@ A campaign donor (or contributor) is uniquely identified using his name and zip 
 donors_dict = {(donor name, zip code):earliest donation year}
 ```
 
-### Receiver Hash Map
+### Politician Hash Map
 The politicians (or receivers) list is also stored in a hash map implemented as a Python dictionary named **politicians\_dict** in the code. Its key is a tuple containing receiver id, zip code and donation year. Its value is also a tuple containing running donation count, running total donation amount and a list of individual donation amounts sorted in ascending order. 
 
 ```
@@ -110,7 +110,7 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
        - If does not exist \-
          - Add the recipient to the politicians list. Initialize the running donation count (to 1), running donation total (to the current donation amount)  and list of donation amounts (to a list containing the current donation amount).  
   5) Calculate the percentile rank using the standard formula. 
-  6) Write the record with recipient details (ID, zip code and donation year), percentile rank of this contribution to the recipient, running donation count for this recipient, and running donation total for this recipient to the output file. 
+  6) Write the record with recipient details (ID, zip code and donation year), percentile rank contribution for this recipient-zip-year, running donation count for this recipient-zip-year, and running donation total for this recipient-zip-year to the output file. 
   7) If end of input file reached, stop the processing.
   8) Go to step #1.
  
