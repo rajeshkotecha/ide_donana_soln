@@ -78,7 +78,7 @@ The politicians (or receivers) list is also stored in a hash map implemented as 
 
 ```
 politicians_dict = {(receiver id, zip code, donation year):[donation count, total donation amt, 
-                                                           [donation amt1, donation amt2, donation amt3, ...]]}
+                                                            [donation amt1, donation amt2, donation amt3, ...]]}
 ```
 
 # Algorithm
