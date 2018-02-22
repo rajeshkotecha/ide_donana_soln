@@ -112,7 +112,12 @@ politicians_dict = {(receiver id, zip code, donation year):[donation count, tota
          - Add current contribution amount to the list of donation amounts for this recipient, zip code and donation year.
        - If does not exist \-
          - Add the recipient to the politicians list. Initialize the running donation count (to 1), running donation total (to the current donation amount)  and list of donation amounts (to a list containing the current donation amount).  
-  5) Calculate the percentile rank using the standard formula. 
+  5) Calculate the percentile rank using the standard formula shown below \- 
+     - Formula: `n = (P/100) * N` 
+       - P = Percentile Rank
+       - N = Total number of values in the list
+       - n = Exact place in the sorted (in increasing order) list of N values 
+       - Actual index in the list would be `(ceil (n) - 1)`
   6) Write the record with recipient details (ID, zip code and donation year), percentile rank contribution for this recipient-zip-year, running donation count for this recipient-zip-year, and running donation total for this recipient-zip-year to the output file. 
   7) If end of input file reached, stop the processing.
   8) Go to step \#1 to read the next individual contribution record. 
