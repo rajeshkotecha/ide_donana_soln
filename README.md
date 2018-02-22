@@ -86,7 +86,7 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
 ## Data Processing Steps -
 
   1) Read next record from the input (individual contributions) file. 
-  2) If the donation is not from an individual or any business rule data validations fail 
+  2) If the donation is not from an individual or any business rule data validations fail \-
      - Skip the record. 
      - Go to step \#1. 
   3) Check if the contributor (name + zip) exists in the donors list. 
