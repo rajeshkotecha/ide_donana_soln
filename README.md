@@ -82,4 +82,26 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
 ```
 
 # Algorithm
+##Data Processing Steps -
+  1) Read next record from the input (individual contributions) file. 
+  2) If the donation is not from an individual or any business rule data validations fail 
+       -- Skip the record. 
+       -- Go to step \#1. 
+  3) Check if the contributor (name + zip) exists in the donors list. 
+     If the contributor exists, 
+       -- Check if the donation is in chronological order
+       -- If yes, 
+            -- He is a repeat donor.
+       -- If not, 
+            -- Update the earliest year for the contributor in the donors list 
+            -- Go to step \#1. 
+     If the contributor does not exist,
+       -- Add the contributor (name + zip) and year to the donors list.
+       -- Go to step \#1.
+  4) If the contributor is a repeat donor
 
+  5) Calculate the percentile rank using the standard formula. 
+  6) Write the record with recipient details, percentile rank, running donation count, and running donation total to the output file. 
+  7) If end of input file reached, stop.
+  8) Go to step #1.
+ 
