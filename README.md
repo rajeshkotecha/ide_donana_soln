@@ -89,7 +89,7 @@ politicians_dict = {(receiver id, zip code, donation year):(donation count, tota
   1) Read a record from the input (individual contributions) file. 
   2) If the donation is not from an individual or any business rule data validations fail \-
      - Skip the record. 
-     - Go to step \#1. 
+     - Go to step \#1 to read the next individual contribution record. 
   3) Check if the contributor (name + zip) exists in the donors list \-  
      - If the contributor (name + zip) exists \- 
        - Check if the donation is in chronological order \-
