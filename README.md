@@ -74,11 +74,11 @@ donors_dict = {(donor name, zip code):earliest donation year}
 ```
 
 ### Politician Hash Map
-The politicians (or receivers) list is also stored in a hash map implemented as a Python dictionary named **politicians\_dict** in the code. Its key is a tuple containing receiver id, zip code and donation year. Its value is also a tuple containing running donation count, running total donation amount and a list of individual donation amounts sorted in ascending order. 
+The politicians (or receivers) list is also stored in a hash map implemented as a Python dictionary named **politicians\_dict** in the code. Its key is a tuple containing receiver id, zip code and donation year. Its value is a list containing running donation count, running total donation amount and a list of individual donation amounts sorted in ascending order. 
 
 ```
-politicians_dict = {(receiver id, zip code, donation year):(donation count, total donation amt, 
-                                                           [donation amt1, donation amt2, donation amt3, ...]}
+politicians_dict = {(receiver id, zip code, donation year):[donation count, total donation amt, 
+                                                           [donation amt1, donation amt2, donation amt3, ...]]}
 ```
 
 # Algorithm
